@@ -24,8 +24,6 @@
 		698B2C5B260BD1C900416D76 /* EventoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698B2C59260BD1C900416D76 /* EventoViewCell.xib */; };
 		698B2C5E260BD54800416D76 /* EventoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B2C5D260BD54800416D76 /* EventoAPIService.swift */; };
 		698B2C60260BD5EB00416D76 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B2C5F260BD5EB00416D76 /* Networking.swift */; };
-		698B2C65260C777F00416D76 /* _Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B2C63260C777F00416D76 /* _Evento.swift */; };
-		698B2C66260C777F00416D76 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B2C64260C777F00416D76 /* Evento.swift */; };
 		698B2C68260D09DF00416D76 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B2C67260D09DF00416D76 /* Eventos.swift */; };
 		F1E8B37A406ED18000E4C36C /* Pods_EventosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44622CC2D323F2C1FC66500 /* Pods_EventosUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,8 +71,6 @@
 		698B2C59260BD1C900416D76 /* EventoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventoViewCell.xib; sourceTree = "<group>"; };
 		698B2C5D260BD54800416D76 /* EventoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoAPIService.swift; sourceTree = "<group>"; };
 		698B2C5F260BD5EB00416D76 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		698B2C63260C777F00416D76 /* _Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Evento.swift; sourceTree = "<group>"; };
-		698B2C64260C777F00416D76 /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		698B2C67260D09DF00416D76 /* Eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		AA815638906397EEA60C0EF1 /* Pods_Eventos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0583DC5BC0A80FBCE938CBF /* Pods-EventosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventosTests/Pods-EventosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,8 +192,6 @@
 		698B2C49260AFE8A00416D76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				698B2C64260C777F00416D76 /* Evento.swift */,
-				698B2C63260C777F00416D76 /* _Evento.swift */,
 				698B2C67260D09DF00416D76 /* Eventos.swift */,
 			);
 			path = Model;
@@ -461,13 +455,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				698B2C66260C777F00416D76 /* Evento.swift in Sources */,
 				698B2C60260BD5EB00416D76 /* Networking.swift in Sources */,
 				698B2C5E260BD54800416D76 /* EventoAPIService.swift in Sources */,
 				698B2C4E260B01FD00416D76 /* EventoViewModel.swift in Sources */,
 				698B2C1E260AF9D200416D76 /* ViewController.swift in Sources */,
 				698B2C5A260BD1C900416D76 /* EventoViewCell.swift in Sources */,
-				698B2C65260C777F00416D76 /* _Evento.swift in Sources */,
 				698B2C57260BD10900416D76 /* EventoDataSource.swift in Sources */,
 				698B2C68260D09DF00416D76 /* Eventos.swift in Sources */,
 				698B2C1C260AF9D200416D76 /* AppDelegate.swift in Sources */,

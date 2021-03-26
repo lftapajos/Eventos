@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class EventoViewCell: UITableViewCell {
 
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activitity: UIActivityIndicatorView!
     
     var eventoItem: ListaEventos? {
         
@@ -21,7 +23,16 @@ class EventoViewCell: UITableViewCell {
                 
                 self.titleLabel.text = evento.title ?? ""
                 
-                //self.picture.image = UIImage(named: evento.image!)
+                //print(evento.image!)
+                Alamofire.request(evento.image!).responseData { response in
+                    if case .success(let image) = response.result {
+                        DispatchQueue.main.async(execute: {
+                            self.activitity.stopAnimating()
+                            self.activitity.hidesWhenStopped = true
+                            self.picture.image = UIImage(data: image)
+                        })
+                    }
+                }
                 
                 self.picture.contentMode = .scaleToFill
             }

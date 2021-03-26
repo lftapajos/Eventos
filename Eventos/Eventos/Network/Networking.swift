@@ -98,22 +98,7 @@ extension Requestable {
             return
         }
         
-        // var request = URLRequest(url: url)
-        
-        // let deviceID = "12334"
-        //request.setValue(deviceID, forHTTPHeaderField: "Device-ID")
-        // if let params = params {
-        /*  request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-         request.setValue("super secret password", forHTTPHeaderField: "Authorization")
-         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.prettyPrinted) */
-        
-        // Http method
-        //common headers
-        // request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
-        //  request.setValue(ContentType.ENUS.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptLangauge.rawValue)
-        // }
-        
-        print(url)
+        //print(url)
         //http://5f5a8f24d44d640016169133.mockapi.io/api/events
         
         var request = URLRequest(url:url)

@@ -42,7 +42,7 @@ class EventoViewController: UIViewController {
     }
     
     func setData() {
-        self.navigationItem.title = "Eventos"
+        self.navigationItem.title = "Lista de Eventos"
     }
 }
 
@@ -106,15 +106,14 @@ extension EventoViewController {
         self.viewModel.eventoDidChanges = { (finished, error) in
             if !error {
                 self.reloadTableView()
-            } else {
-                self.reloadTableView()
-                //MC] Reading from private effective user settings.
             }
         }
     }
     
     func reloadTableView() {
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -132,9 +131,8 @@ extension EventoViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let evento = viewModel.eventos![indexPath.row]
-        //print(evento)
-        //print(evento.id!)
         cell.eventoItem = evento
+        cell.contentView.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 153/255.0, alpha: 1)
         return cell
     }
     

@@ -6,11 +6,11 @@ class EventoAPIService: NSObject, Requestable {
     
     fileprivate let laundryUrl = "http://5f5a8f24d44d640016169133.mockapi.io/api/events"
     
-    public var eventos: [Evento]?
+    public var eventos: [ListaEventos]?
     
     // Prepare the service
     
-    func prepare(callback: @escaping([Evento]?,Bool) -> Void) {
+    func prepare(callback: @escaping([ListaEventos]?,Bool) -> Void) {
         
         let filePath = Bundle.main.url(forResource: "evento", withExtension: "json")
         
