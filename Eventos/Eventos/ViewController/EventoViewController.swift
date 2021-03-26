@@ -139,5 +139,11 @@ extension EventoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        detailViewController.evento = viewModel.eventos![indexPath.row]
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
