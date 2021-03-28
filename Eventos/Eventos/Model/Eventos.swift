@@ -1,12 +1,5 @@
 import Foundation
 
-struct ListaEventos {
-    let title: String?
-    let id: String?
-    let image: String?
-    let description: String?
-}
-
 struct Eventos: Decodable {
     enum CodingKeys: String, CodingKey {
         case pepople, date, description, image, longitude, latitude, price, title, id
@@ -20,6 +13,13 @@ struct Eventos: Decodable {
     let price: Decimal?
     let title: String?
     let id: String?
+}
+
+struct ListaEventos {
+    let title: String?
+    let id: String?
+    let image: String?
+    let description: String?
 }
 
 extension ListaEventos: Decodable {

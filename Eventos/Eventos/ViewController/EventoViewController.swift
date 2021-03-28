@@ -19,17 +19,6 @@ class EventoViewController: UIViewController {
         return stackView
     }
     
-    /*
-    var filterButton: UIButton {
-        let button = UIButton(frame: .zero)
-        button.setTitle("Filter By Name", for: .normal)
-        button.backgroundColor = .red
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(filterButtonTapped(_:)), for: .touchUpInside)
-        return button
-    }
-    */
-    
     let viewModel = EventoViewModel()
     
     override func viewDidLoad() {
@@ -78,23 +67,8 @@ extension EventoViewController {
         
     }
     
-    /*
-    func prepareButton() {
-        filterButtonself.view.addSubview(filterButton)
-        // self.filterButton.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-    }
-    */
 }
 
-//MARK: Action
-extension EventoViewController {
-    
-    /*
-    @objc func filterButtonTapped(_ button: UIButton) {
-        viewModel.eventos = viewModel.eventos?.sorted(by: .title)
-    }
-    */
-}
 //MARK: Private Methods
 extension EventoViewController {
     

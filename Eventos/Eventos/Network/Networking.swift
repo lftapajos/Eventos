@@ -82,16 +82,6 @@ extension Method: CustomStringConvertible {
 protocol Requestable {}
 
 extension Requestable {
-    internal func getRequest(url: String, callback: @escaping (_ json: NSDictionary?) -> ()) {
-        do {
-            try request(method: .get, url: url, params: nil) { (dict) in
-                //callback(dict)
-            }
-        } catch {
-            callback(nil)
-        }
-    }
-    
     internal func request(method: Method, url: String, params: [NSString: Any]? = nil, callback: @escaping Handler) {
         
         guard let url = URL(string: url) else {
@@ -107,7 +97,36 @@ extension Requestable {
             (data, response, error) in
             if error == nil {
                 do {
-                    //let myStructDictionary = try JSONDecoder().decode([ListaEventos].self, from: data!)
+                    let myStructDictionary = try JSONDecoder().decode([ListaEventos].self, from: data!)
+                    myStructDictionary.forEach { print($0.title!) }
+                    
+                    callback(.success(data!))
+                } catch {
+                    print(error)
+                    return
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    internal func requestDetalhes(method: Method, url: String, params: [NSString: Any]? = nil, callback: @escaping Handler) {
+        
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        //print(url)
+        //http://5f5a8f24d44d640016169133.mockapi.io/api/events
+        
+        var request = URLRequest(url:url)
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) {
+            (data, response, error) in
+            if error == nil {
+                do {
+                    
+                    let myStructDictionary = try JSONDecoder().decode(DetalhesEventos.self, from: data!)
                     //myStructDictionary.forEach { print($0.title!) }
                     
                     callback(.success(data!))
@@ -118,9 +137,5 @@ extension Requestable {
             }
         }
         task.resume()
-        
-        
-        
-        
     }
 }
