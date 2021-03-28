@@ -24,6 +24,7 @@ class EventoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(red: 250/255.0, green: 204/255.0, blue: 122/255.0, alpha: 1)
         // Do any additional setup after loading the view.
         prepareUI()
         setData()
@@ -39,7 +40,6 @@ class EventoViewController: UIViewController {
 
 extension EventoViewController {
     func prepareUI() {
-        //prepareButton()
         prepareTableView()
         prepareStackView()
         prepareViewModelObserver()
@@ -59,7 +59,7 @@ extension EventoViewController {
     }
     
     func prepareTableView() {
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(red: 250/255.0, green: 204/255.0, blue: 122/255.0, alpha: 1)
         self.tableView.separatorStyle   = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -106,7 +106,7 @@ extension EventoViewController: UITableViewDelegate, UITableViewDataSource {
         
         let evento = viewModel.eventos![indexPath.row]
         cell.eventoItem = evento
-        cell.contentView.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 153/255.0, alpha: 1)
+        cell.contentView.backgroundColor = UIColor(red: 250/255.0, green: 204/255.0, blue: 122/255.0, alpha: 1)
         return cell
     }
     

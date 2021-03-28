@@ -1,4 +1,5 @@
 import UIKit
+
 /*
  Enum uses in API
  https://www.swiftbysundell.com/posts/the-power-of-result-types-in-swift
@@ -97,13 +98,10 @@ extension Requestable {
             (data, response, error) in
             if error == nil {
                 do {
-                    let myStructDictionary = try JSONDecoder().decode([ListaEventos].self, from: data!)
-                    myStructDictionary.forEach { print($0.title!) }
+                    //let myStructDictionary = try JSONDecoder().decode([ListaEventos].self, from: data!)
+                    //myStructDictionary.forEach { print($0.title!) }
                     
                     callback(.success(data!))
-                } catch {
-                    print(error)
-                    return
                 }
             }
         }
@@ -125,17 +123,14 @@ extension Requestable {
             (data, response, error) in
             if error == nil {
                 do {
-                    
-                    let myStructDictionary = try JSONDecoder().decode(DetalhesEventos.self, from: data!)
+                    //let myStructDictionary = try JSONDecoder().decode(DetalhesEventos.self, from: data!)
                     //myStructDictionary.forEach { print($0.title!) }
                     
                     callback(.success(data!))
-                } catch {
-                    print(error)
-                    return
                 }
             }
         }
         task.resume()
     }
+
 }

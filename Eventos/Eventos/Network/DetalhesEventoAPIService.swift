@@ -19,8 +19,6 @@ class DetalhesEventoAPIService: NSObject, Requestable {
     
     func fetchDetalhesEventos(eventoId: String, callback: @escaping Handler) {
         
-        //print(Domain.baseUrl() + APIEndpoint.eventos + "/\(eventoId)")
-        
         requestDetalhes(method: .get, url: Domain.baseUrl() + APIEndpoint.eventos + "/\(eventoId)") { (result) in
             
             callback(result)

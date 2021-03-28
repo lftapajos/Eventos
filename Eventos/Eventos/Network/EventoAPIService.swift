@@ -10,15 +10,7 @@ class EventoAPIService: NSObject, Requestable {
     public var eventoId: String?
     
     // Prepare the service
-    
     func prepare(callback: @escaping([ListaEventos]?,Bool) -> Void) {
-        
-        //let filePath = Bundle.main.url(forResource: "evento", withExtension: "json")
-        
-        //let originalContents = try? Data(contentsOf: filePath!)
-        
-        //let eventos = try? JSONDecoder().decode([Evento].self, from: originalContents!)
-        
         callback(eventos!, false)
     }
     

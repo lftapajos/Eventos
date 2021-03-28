@@ -52,9 +52,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="activitity" destination="9gr-x9-WgX" id="fDv-X0-K2e"/>
-                <outlet property="picture" destination="ejK-S1-BLy" id="rje-yN-jFr"/>
-                <outlet property="titleLabel" destination="c16-63-arO" id="QTi-Rf-0Wa"/>
+                <outlet property="activitity" destination="9gr-x9-WgX" id="fvh-jl-JKa"/>
+                <outlet property="picture" destination="ejK-S1-BLy" id="oQO-xn-8R8"/>
+                <outlet property="titleLabel" destination="c16-63-arO" id="Wwd-5i-EMG"/>
             </connections>
             <point key="canvasLocation" x="63" y="112"/>
         </tableViewCell>
