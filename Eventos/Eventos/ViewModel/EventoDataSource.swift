@@ -6,8 +6,6 @@ protocol EventoDataSourceProtocol: class {
 
 class EventoDataSource: NSObject {
     
-    // weak var parentView: EventoDataSourceProtocol?
-    
     weak var parentView: EventoViewController?
     
     init(attachView: EventoViewController) {

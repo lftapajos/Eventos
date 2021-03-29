@@ -1,9 +1,5 @@
 import UIKit
 
-/*
- Enum uses in API
- https://www.swiftbysundell.com/posts/the-power-of-result-types-in-swift
- */
 enum Result<Value: Decodable> {
     case success(Value)
     case failure(Bool)
@@ -89,18 +85,12 @@ extension Requestable {
             return
         }
         
-        //print(url)
-        //http://5f5a8f24d44d640016169133.mockapi.io/api/events
-        
         var request = URLRequest(url:url)
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request) {
             (data, response, error) in
             if error == nil {
                 do {
-                    //let myStructDictionary = try JSONDecoder().decode([ListaEventos].self, from: data!)
-                    //myStructDictionary.forEach { print($0.title!) }
-                    
                     callback(.success(data!))
                 }
             }
@@ -114,18 +104,12 @@ extension Requestable {
             return
         }
         
-        //print(url)
-        //http://5f5a8f24d44d640016169133.mockapi.io/api/events
-        
         var request = URLRequest(url:url)
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request) {
             (data, response, error) in
             if error == nil {
                 do {
-                    //let myStructDictionary = try JSONDecoder().decode(DetalhesEventos.self, from: data!)
-                    //myStructDictionary.forEach { print($0.title!) }
-                    
                     callback(.success(data!))
                 }
             }

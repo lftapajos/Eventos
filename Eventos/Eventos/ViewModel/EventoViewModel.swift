@@ -5,6 +5,9 @@ protocol EventoViewModelProtocol {
     var eventoDidChanges: ((Bool, Bool) -> Void)? { get set }
     
     func fetchEventoList()
+    
+    func convertMilisecoundsToDate(milisecond: Int) -> String
+    
 }
 class EventoViewModel: EventoViewModelProtocol {
     

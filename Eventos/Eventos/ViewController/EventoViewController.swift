@@ -1,11 +1,3 @@
-//
-//  EventoViewController.swift
-//  Eventos
-//
-//  Created by Luis Felipe Tapajos on 24/03/2021.
-//  Copyright © 2021 Luis Felipe Tapajos. All rights reserved.
-//
-
 import UIKit
 
 class EventoViewController: UIViewController {
@@ -43,7 +35,6 @@ class EventoViewController: UIViewController {
 
 extension EventoViewController {
     func prepareUI() {
-        //prepareSearchBar()
         prepareTableView()
         prepareStackView()
         prepareViewModelObserver()

@@ -32,6 +32,8 @@
 		69DB317C261085B80053583A /* DetalhesEventoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB317A261085B80053583A /* DetalhesEventoViewCell.swift */; };
 		69DB317D261085B80053583A /* DetalhesEventoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DB317B261085B80053583A /* DetalhesEventoViewCell.xib */; };
 		69DB318126108A550053583A /* DetalhesEventoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB318026108A550053583A /* DetalhesEventoDataSource.swift */; };
+		69DB318426118EE80053583A /* EventoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB318326118EE80053583A /* EventoViewModelTests.swift */; };
+		69DB318626118F040053583A /* DetalhesEventoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB318526118F040053583A /* DetalhesEventoViewModelTests.swift */; };
 		F1E8B37A406ED18000E4C36C /* Pods_EventosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44622CC2D323F2C1FC66500 /* Pods_EventosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		69DB317A261085B80053583A /* DetalhesEventoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesEventoViewCell.swift; sourceTree = "<group>"; };
 		69DB317B261085B80053583A /* DetalhesEventoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalhesEventoViewCell.xib; sourceTree = "<group>"; };
 		69DB318026108A550053583A /* DetalhesEventoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesEventoDataSource.swift; sourceTree = "<group>"; };
+		69DB318326118EE80053583A /* EventoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoViewModelTests.swift; sourceTree = "<group>"; };
+		69DB318526118F040053583A /* DetalhesEventoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesEventoViewModelTests.swift; sourceTree = "<group>"; };
 		AA815638906397EEA60C0EF1 /* Pods_Eventos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0583DC5BC0A80FBCE938CBF /* Pods-EventosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventosTests/Pods-EventosTests.release.xcconfig"; sourceTree = "<group>"; };
 		C44622CC2D323F2C1FC66500 /* Pods_EventosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,7 @@
 				698B2C4F260BC95500416D76 /* View */,
 				698B2C4C260B01BF00416D76 /* ViewModel */,
 				698B2C49260AFE8A00416D76 /* Model */,
+				69DB318226118EA80053583A /* Tests */,
 				698B2C1B260AF9D200416D76 /* AppDelegate.swift */,
 				698B2C1D260AF9D200416D76 /* ViewController.swift */,
 				698B2C1F260AF9D200416D76 /* Main.storyboard */,
@@ -259,6 +264,15 @@
 				69476A64260FFCA500D4C34D /* DetalhesEventoAPIService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		69DB318226118EA80053583A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				69DB318326118EE80053583A /* EventoViewModelTests.swift */,
+				69DB318526118F040053583A /* DetalhesEventoViewModelTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,6 +515,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				698B2C31260AF9E000416D76 /* EventosTests.swift in Sources */,
+				69DB318426118EE80053583A /* EventoViewModelTests.swift in Sources */,
+				69DB318626118F040053583A /* DetalhesEventoViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
