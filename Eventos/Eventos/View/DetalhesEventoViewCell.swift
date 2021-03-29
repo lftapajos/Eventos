@@ -40,12 +40,14 @@ class DetalhesEventoViewCell: UITableViewCell {
                 }
                 self.picture.contentMode = .scaleToFill
                 
+                let dateConverted = EventoViewModel().convertMilisecoundsToDate(milisecond: evento.date!)
+                
                 self.titleLabel.text = evento.title!
                 self.descriptionTextView.text = evento.description!
-                self.priceTextLabel.text = "\(String(describing: evento.price!))"
-                self.dateTextLabel.text = "\(String(describing: evento.date!))"
-                self.longitudeTextLabel.text = "\(String(describing: evento.longitude!))"
-                self.latitudeTextLabel.text = "\(String(describing: evento.latitude!))"
+                self.priceTextLabel.text = "Preço: \(String(describing: evento.price!))"
+                self.dateTextLabel.text = "Data: \(dateConverted))"
+                self.longitudeTextLabel.text = "Longitude: \(String(describing: evento.longitude!))"
+                self.latitudeTextLabel.text = "Latitude: \(String(describing: evento.latitude!))"
             }
         }
     }

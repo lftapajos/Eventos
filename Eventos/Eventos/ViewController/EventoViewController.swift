@@ -12,7 +12,10 @@ class EventoViewController: UIViewController {
 
     //MARK: Internal Properties
     
+    let searchBar = UISearchBar()
+    
     let tableView = UITableView(frame: .zero, style: .plain)
+    
     var stackView: UIStackView {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
@@ -40,6 +43,7 @@ class EventoViewController: UIViewController {
 
 extension EventoViewController {
     func prepareUI() {
+        //prepareSearchBar()
         prepareTableView()
         prepareStackView()
         prepareViewModelObserver()

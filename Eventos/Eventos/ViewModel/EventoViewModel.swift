@@ -39,4 +39,11 @@ class EventoViewModel: EventoViewModelProtocol {
             }
         }
     }
+    
+    func convertMilisecoundsToDate(milisecond: Int) -> String {
+        let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(milisecond)/1000)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm:ss"
+        return "\(dateVar)"
+    }
 }
