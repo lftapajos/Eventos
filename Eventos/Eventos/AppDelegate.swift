@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Eventos
-//
-//  Created by Luis Felipe Tapajos on 24/03/2021.
-//  Copyright © 2021 Luis Felipe Tapajos. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +8,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: EventoViewController())
+        window?.makeKeyAndVisible()
+
         return true
     }
 

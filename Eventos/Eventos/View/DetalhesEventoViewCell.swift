@@ -1,0 +1,60 @@
+import UIKit
+import Alamofire
+
+class DetalhesEventoViewCell: UITableViewCell {
+
+    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activitity: UIActivityIndicatorView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var priceTextLabel: UILabel!
+    @IBOutlet weak var dateTextLabel: UILabel!
+    @IBOutlet weak var longitudeTextLabel: UILabel!
+    @IBOutlet weak var latitudeTextLabel: UILabel!
+    @IBOutlet weak var shareButto: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
+
+    var eventoItem: DetalhesEventos? {
+        
+        didSet {
+            
+            if let evento = eventoItem {
+                
+                //print(evento.image!)
+                Alamofire.request(evento.image!).responseData { response in
+                    if case .success(let image) = response.result {
+                        DispatchQueue.main.async(execute: {
+                            self.activitity.stopAnimating()
+                            self.activitity.hidesWhenStopped = true
+                            self.picture.image = UIImage(data: image)
+                        })
+                    }
+                }
+                self.picture.contentMode = .scaleToFill
+                
+                let dateConverted = EventoViewModel().convertMilisecoundsToDate(milisecond: evento.date!)
+                
+                self.titleLabel.text = evento.title!
+                self.descriptionTextView.text = evento.description!
+                self.priceTextLabel.text = "Preço: \(String(describing: evento.price!))"
+                self.dateTextLabel.text = "Data: \(dateConverted))"
+                self.longitudeTextLabel.text = "Longitude: \(String(describing: evento.longitude!))"
+                self.latitudeTextLabel.text = "Latitude: \(String(describing: evento.latitude!))"
+            }
+        }
+    }
+    
+    override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        
+        //super.setSelected(selected, animated: false)
+        
+        // Configure the view for the selected state
+    }
+    
+}
